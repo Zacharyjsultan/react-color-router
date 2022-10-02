@@ -8,7 +8,7 @@ export default function Background() {
   return (
     <div>
       <Switch>
-        <Route>
+        <Route path="/rgb/:r/:g/:b" >
           <Rgb />
         </Route>
         <Route path="*">
