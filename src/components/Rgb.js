@@ -7,7 +7,7 @@ export default function Rgb() {
   const { r, g, b } = useParams();
   return (
     <div className="wallpaper" style={{ background: `rgb(${r}, ${g}, ${b})` }}>
-      <p>{ `rgb(${r}, ${g}, ${b})` }</p>
+      <div>{ `rgb(${r}, ${g}, ${b})` }</div>
     </div>
   );
 }

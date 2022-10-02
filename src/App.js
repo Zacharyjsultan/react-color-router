@@ -8,7 +8,7 @@ function App() {
       
       <Router>
         <header>
-          <Route exact path="/">
+          <Route path="/">
             <Redirect to="/rgb/61/45/61" />
           </Route>
           <ol>
