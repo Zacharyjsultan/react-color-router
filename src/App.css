@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+a {
+  color: inherit;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +38,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.frogs.active {
+  color: rgb(50, 168, 82);
+}
+
+.fire.active {
+  color: rgb(189, 4, 13);
+}
+
+.barney.active {
+  color: rgb(183, 4, 189);
+}
+
+
+header ol {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  min-height: 5vh;
 }
