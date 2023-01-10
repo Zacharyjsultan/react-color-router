@@ -1,24 +1,22 @@
-import { NavLink, Redirect, Route, BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Background from './components/Background';
+import NotFound from './components/NotFound';
+import Rgb from './components/Rgb';
 
 function App() {
   return (
     <div className="App">
-      
-      <Router>
-        <header>
-          <Route path="/">
-            <Redirect to="/rgb/61/45/61" />
-          </Route>
-          <ol>
-            <NavLink className="frogs" to="/rgb/50/168/82">Frogs</NavLink>
-            <NavLink className="fire" to="/rgb/189/4/13">Fire</NavLink>
-            <NavLink className="barney" to="/rgb/183/4/189">Barney</NavLink>
-          </ol>
-        </header>
+      <Routes>
         <Background />
-      </Router>
+        <Route path="/" element={<Navigate to="/rgb/61/45/61" />}></Route>
+
+        <Route path="/rgb/:r/:g/:b">
+          <Rgb />
+        </Route>
+        <Route path="*">
+          <NotFound />
+        </Route>
+      </Routes>
     </div>
   );
 }

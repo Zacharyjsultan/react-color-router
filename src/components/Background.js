@@ -1,20 +1,25 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import NotFound from './NotFound';
-import Rgb from './Rgb';
+import { Outlet } from 'react-router';
+import { NavLink } from 'react-router-dom';
+
 import './Background.css';
 
 export default function Background() {
   return (
-    <div>
-      <Switch>
-        <Route path="/rgb/:r/:g/:b" >
-          <Rgb />
-        </Route>
-        <Route path="*">
-          <NotFound />
-        </Route>
-      </Switch>
-    </div>
+    <>
+      <header>
+        <ol>
+          <NavLink className="frogs" to="/rgb/50/168/82">
+            Frogs
+          </NavLink>
+          <NavLink className="fire" to="/rgb/189/4/13">
+            Fire
+          </NavLink>
+          <NavLink className="barney" to="/rgb/183/4/189">
+            Barney
+          </NavLink>
+        </ol>
+        <Outlet />
+      </header>
+    </>
   );
 }
