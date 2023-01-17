@@ -7,7 +7,7 @@ export default function Background() {
   return (
     <>
       <header>
-        <ol>
+        <ol className="rgb">
           <NavLink className="frogs" to="/rgb/50/168/82">
             Frogs
           </NavLink>
