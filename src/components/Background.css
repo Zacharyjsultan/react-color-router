@@ -1,0 +1,21 @@
+.frogs {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  background-color: aqua;
+}
+
+.fire {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: brown;
+}
+
+.barney {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  margin-right: 12em;
+  background-color: beige;
+}
